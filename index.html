@@ -3,9 +3,11 @@
 	<title>Javascript Demo</title>
 	<style>
 		body {
-			background-color:black;
+			background-image: url("giphy.gif");
+			background-size:100% 100%;
 			font-family: monospace;
 			color:white;
+			text-shadow: 2px 2px black;
 			font-size:50px;
 			text-align: center;
 			margin-top:20%;
@@ -25,7 +27,7 @@
 
 	<script>
 
-		var words = ["fun", "exciting", "about not giving up", "being helpful", "being open", "what I learned at CodingDojo!"],
+		var words = ["fun","exciting","about not giving up","being helpful","being open","what I learned at CodingDojo!"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
@@ -34,7 +36,7 @@
 		{
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
 
-			if(character_counter == words[word_counter].length)
+			if(character_counter > words[word_counter].length)
 			{
 				word_counter++; 	//choose a different word
 				character_counter = 0;	//start over with the first character of the word
@@ -46,7 +48,7 @@
 			}
 		}
 
-		setInterval(updateText,300);
+		setInterval(updateText,350);
 
 	</script>
 
